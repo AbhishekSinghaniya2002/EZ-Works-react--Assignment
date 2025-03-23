@@ -18,7 +18,8 @@ export default function Services() {
     e.preventDefault();
     setMessage("");
 
-    // First Email validation
+    //  First Email validation
+
     if (!email) {
       setMessage("Email is required");
       return;
@@ -55,7 +56,7 @@ export default function Services() {
     <section className="container mx-auto px-5 sm:px-10 py-10">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
         
-        // Here i am writing for left side part EZ logo etc
+        {/* Now I am writing for the Left Side Part - Ez-Works Logo etc*/}
 
         <div className="space-y-4 text-center md:text-left cursor-pointer">
           <div className="flex items-center justify-center md:justify-start space-x-3">
@@ -68,7 +69,7 @@ export default function Services() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...
           </p>
           
-// Desktop View - Contact Form 
+          {/* Here i Write for the Desktop View - Contact Form */}
 
           <form onSubmit={handleSubmit} className="hidden md:flex space-x-3">
             <input
@@ -88,7 +89,7 @@ export default function Services() {
           {message && <p className="text-red-500 mt-2">{message}</p>}
         </div>
 
-  // Now Right Side - Services Cards 
+        {/* Now I am writing for the Right Side Part - Services Cards */}
 
         <div className="col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
@@ -96,12 +97,11 @@ export default function Services() {
               key={index}
               className="bg-blue-900 text-white p-6 rounded-lg shadow-lg flex items-center space-x-4 cursor-pointer hover:bg-blue-800 transition-all duration-300"
             >
-          // For Service Image (Logo) 
+              {/* Now for All the Service Image (Logo) */}
 
               <img src={service.image} alt={service.title} className="w-10 h-10 md:w-12 md:h-12" />
               
-            // For Title & Description
-
+              {/* Now for all the Title & Description */}
               <div>
                 <h3 className="text-sm sm:text-base md:text-lg font-semibold">{service.title}</h3>
                 <p className="text-xs sm:text-sm mt-1">
@@ -114,8 +114,7 @@ export default function Services() {
 
       </div>
 
-      // Mobile View - Contact Form 
-      
+      {/* Now for the  Mobile View - Contact Form */}
       <div className="fixed bottom-0 left-0 w-full bg-white shadow-md p-4 flex flex-col sm:hidden">
         <form onSubmit={handleSubmit} className="flex flex-col">
           <input
